@@ -1,0 +1,41 @@
+<%= form_with(model: @principal, local: true) do |form| %>
+
+  <% if @principal.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@principal.errors.count, "error") %> prohibited
+        this principal from being saved:
+      </h2>
+      <ul>
+        <% @principal.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= form.label :Name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :education %><br>
+    <%= form.text_field :education %>
+  </p>
+  <p>
+    <%= form.label :sspecialization %><br>
+    <%= form.text_field :sspecialization %>
+  </p>
+  <p>
+    <%= form.label :gender %><br>
+    <%= form.text_field :gender %>
+  </p>
+  <p>
+    <%= form.label :phone %><br>
+    <%= form.text_field :phone %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

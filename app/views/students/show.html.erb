@@ -1,0 +1,25 @@
+<h1>show</h1>
+<p>
+  <strong>student Name:</strong>
+  <%= @student.name %>
+</p>
+
+<p>
+  <strong>gender:</strong>
+  <%= @student.gender %>
+</p>
+<p>
+  <strong>Address:</strong>
+  <%= @student.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @student.phone %>
+</p>
+<p>
+  <strong>school Name:</strong>
+  <%# <%= @student.school.name %> %>
+</p>
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>

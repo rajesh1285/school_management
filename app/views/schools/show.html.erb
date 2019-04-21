@@ -1,0 +1,25 @@
+<h1>show</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @school.name %>
+</p>
+
+<p>
+  <strong>Recognized:</strong>
+  <%= @school.recognized %>
+</p>
+<p>
+  <strong>Address:</strong>
+  <%= @school.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @school.phone %>
+</p>
+<p>
+  <strong>Principal Name:</strong>
+  <%= @school.principal.name %>
+</p>
+<%= link_to 'Edit', edit_school_path(@school) %> |
+<%= link_to 'Back', schools_path %>

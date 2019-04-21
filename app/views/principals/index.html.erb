@@ -1,0 +1,25 @@
+<h1>List of Principals</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Education</th>
+    <th>Specialization</th>
+    <th>Gender</th>
+    <th>Phone</th>
+    <th></th>
+  </tr>
+  <% @principals.each do |principal| %>
+    <tr>
+      <td><%= principal.name %></td>
+      <td><%= principal.education %></td>
+      <td><%= principal.sspecialization %></td>
+      <td><%= principal.gender %></td>
+      <td><%= principal.phone %></td>
+      <td><%= link_to 'Show', principal_path(principal) %></td>
+      <td><%= link_to 'New', new_principal_path %></td>
+      <td><%= link_to 'Edit', edit_principal_path(principal) %></td>
+      <td><%= link_to 'Destroy', principal_path(principal),method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

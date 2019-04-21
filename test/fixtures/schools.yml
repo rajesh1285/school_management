@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  recognized: 
+  address: 
+  phone: 
+  pricipal: one
+
+two:
+  name: 
+  recognized: 
+  address: 
+  phone: 
+  pricipal: two

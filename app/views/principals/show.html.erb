@@ -1,0 +1,25 @@
+<h1>show</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @principal.name %>
+</p>
+
+<p>
+  <strong>Education:</strong>
+  <%= @principal.education %>
+</p>
+<p>
+  <strong>Specialization:</strong>
+  <%= @principal.sspecialization %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @principal.gender %>
+</p>
+<p>
+  <strong>Phone:</strong>
+  <%= @principal.phone %>
+</p>
+<%= link_to 'Edit', edit_principal_path(@principal) %> |
+<%= link_to 'Back', principals_path %>
