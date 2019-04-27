@@ -13,7 +13,7 @@ before_action :set_principal, only: [:show, :edit, :update, :destroy]
   end
 
   def create
-    @principal = Principal.new(teacher_params)
+    @principal = Principal.new(principal_params)
     if @principal.save
       redirect_to @principal
     else
@@ -25,7 +25,7 @@ before_action :set_principal, only: [:show, :edit, :update, :destroy]
   end
 
   def update
-    if @principal.update(school_params)
+    if @principal.update(principal_params)
         redirect_to @principal
       else
         render 'edit'
@@ -42,7 +42,7 @@ before_action :set_principal, only: [:show, :edit, :update, :destroy]
     @principal = Principal.find(params[:id])
   end
   private
-    def teacher_params
-      params.require(:principal).permit(:name, :education,:sspecialization,:gender,:phone)
+    def principal_params
+      params.require(:principal).permit(:name, :education,:specialization,:gender,:phone)
     end
 end

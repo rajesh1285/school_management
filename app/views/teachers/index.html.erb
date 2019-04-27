@@ -7,16 +7,18 @@
     <th>Phone</th>
     <th>education</th>
     <th>gender</th>
-    <th></th>
+    <th>school name</th>
   </tr>
   <% @teachers.each do |teacher| %>
     <tr>
       <td><%= teacher.name %></td>
       <td><%= teacher.subject %></td>
-      <td><%= teacher.speecialization %></td>
+      <td><%= teacher.specialization %></td>
       <td><%= teacher.phone %></td>
       <td><%= teacher.education %></td>
       <td><%= teacher.gender %></td>
+      <td><%= teacher.school.name %></td>
+
       <td><%= link_to 'Show', teacher_path(teacher) %></td>
       <td><%= link_to 'New', new_teacher_path %></td>
       <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>

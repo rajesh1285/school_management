@@ -9,8 +9,8 @@
   <%= @teacher.subject %>
 </p>
 <p>
-  <strong>speecialization:</strong>
-  <%= @teacher.speecialization %>
+  <strong>specialization:</strong>
+  <%= @teacher.specialization %>
 </p>
 <p>
   <strong>education:</strong>
@@ -26,7 +26,7 @@
 </p>
 <p>
   <strong>school Name:</strong>
-  <%# <%= @student.school.name %> %>
+  <%= @teacher.school.name %>
 </p>
 <%= link_to 'Edit', edit_teacher_path(@teacher) %> |
 <%= link_to 'Back', teachers_path %>

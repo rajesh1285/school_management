@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_04_21_051239) do
   create_table "principals", force: :cascade do |t|
     t.string "name"
     t.string "education"
-    t.string "sspecialization"
+    t.string "specialization"
     t.string "gender"
     t.integer "phone"
     t.datetime "created_at", precision: 6, null: false
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2019_04_21_051239) do
   create_table "teachers", force: :cascade do |t|
     t.string "name"
     t.string "subject"
-    t.string "speecialization"
+    t.string "specialization"
     t.string "education"
     t.integer "phone"
     t.string "gender"

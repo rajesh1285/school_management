@@ -3,7 +3,7 @@ class CreateTeachers < ActiveRecord::Migration[6.0]
     create_table :teachers do |t|
       t.string :name
       t.string :subject
-      t.string :speecialization
+      t.string :specialization
       t.string :education
       t.integer :phone
       t.string :gender
