@@ -1,28 +1,34 @@
 <h1>List of teachers</h1>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>subject</th>
-    <th>speecialization</th>
-    <th>Phone</th>
-    <th>education</th>
-    <th>gender</th>
-    <th>school name</th>
-  </tr>
-  <% @teachers.each do |teacher| %>
+<table class="table table-striped">
+  <thead>
     <tr>
-      <td><%= teacher.name %></td>
-      <td><%= teacher.subject %></td>
-      <td><%= teacher.specialization %></td>
-      <td><%= teacher.phone %></td>
-      <td><%= teacher.education %></td>
-      <td><%= teacher.gender %></td>
-      <td><%= teacher.school.name %></td>
-
-      <td><%= link_to 'Show', teacher_path(teacher) %></td>
-      <td><%= link_to 'New', new_teacher_path %></td>
-      <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
-      <td><%= link_to 'Destroy', teacher_path(teacher),method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">subject</th>
+      <th scope="col">specialization</th>
+      <th scope="col">Phone</th>
+      <th scope="col">education</th>
+      <th scope="col">gender</th>
+      <th scope="col">school name</th>
     </tr>
-  <% end %>
+  </thead>
+  <tbody>
+    <tr>
+      <% @teachers.each do |teacher| %>
+        <tr>
+          <td><%= teacher.id %></td>
+          <td><%= teacher.name %></td>
+          <td><%= teacher.subject %></td>
+          <td><%= teacher.specialization %></td>
+          <td><%= teacher.phone %></td>
+          <td><%= teacher.education %></td>
+          <td><%= teacher.gender %></td>
+          <td><%= teacher.school.name %></td>
+          <td><%= link_to 'Show', teacher_path(teacher) %></td>
+          <td><%= link_to 'New', new_teacher_path %></td>
+          <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
+          <td><%= link_to 'Destroy', teacher_path(teacher),method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+  </tbody>
 </table>
