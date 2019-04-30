@@ -29,9 +29,10 @@
     <%= form.label :phone %><br>
     <%= form.text_field :phone %>
   </p>
+
   <p>
-    <%= form.label :principal_id %><br>
-    <%= form.text_field :principal_id  %>
+    <%= form.label :principal_name %><br>
+    <%= form.collection_select :principal_id, Principal.order(:name),:id,:name %>
   </p>
 
     <p>
